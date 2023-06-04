@@ -1,5 +1,5 @@
 <template>
-  <button class="btn-nav" :style="isType">
+  <button class="btn-nav" :class="isType">
     <img src="@/assets/icon/arrow.svg" />
   </button>
 </template>
@@ -15,9 +15,7 @@ export default {
   },
   computed: {
     isType() {
-      return this.type === "next"
-        ? "transform: rotate(0deg);"
-        : "transform: rotate(180deg);";
+      return this.type === "next" ? "next" : "prev";
     },
   },
 };
@@ -25,6 +23,8 @@ export default {
 
 <style lang="scss" scoped>
 .btn-nav {
+  position: absolute;
+  top: 80px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -34,7 +34,15 @@ export default {
   outline: none;
   -webkit-tap-highlight-color: transparent;
   padding: 12px;
-
+  z-index: 2;
+  &.prev {
+    left: 8px;
+    transform: rotate(180deg);
+  }
+  &.next {
+    right: 8px;
+    transform: rotate(0);
+  }
   &:disabled {
     opacity: 0;
     pointer-events: none;

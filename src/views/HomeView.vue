@@ -19,10 +19,8 @@
         ></card>
       </swiper-slide>
     </swiper>
-    <div class="btns-nav">
-      <navigation-button class="custom-button-prev" type="prev" />
-      <navigation-button class="custom-button-next" />
-    </div>
+    <navigation-button class="custom-button-prev" type="prev" />
+    <navigation-button class="custom-button-next" />
   </div>
   <modal-dialog :show="showModal" @close="showModal = false">
     <info-card
@@ -100,13 +98,5 @@ export default {
   padding: 24px;
 }
 .btns-nav {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  z-index: 2;
-  display: flex;
-  width: calc(100% - 16px);
-  transform: translate(-50%);
-  justify-content: space-between;
 }
 </style>
