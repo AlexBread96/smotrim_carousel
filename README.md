@@ -1,4 +1,4 @@
-# vesti
+# Smotrim-Carousel
 
 ## Project setup
 ```
