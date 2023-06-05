@@ -49,7 +49,6 @@ export default {
       personInfo: null,
       isLoading: false,
       showModal: false,
-      titleModal: null,
       modules: [Navigation],
     };
   },
@@ -57,7 +56,6 @@ export default {
     showDialog(idx) {
       this.personInfo = this.persons.find((el) => el.id === idx);
       this.showModal = true;
-      this.titleModal = idx;
     },
   },
   mounted() {
@@ -96,7 +94,5 @@ export default {
   height: 256px;
   margin: 0 auto;
   padding: 24px;
-}
-.btns-nav {
-}
+} 
 </style>
